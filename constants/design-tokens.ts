@@ -1,0 +1,76 @@
+export const designTokens = {
+  colors: {
+    background: "var(--background)",
+    foreground: "var(--foreground)",
+    surface: "var(--color-surface)",
+    surfaceElevated: "var(--color-surface-elevated)",
+    muted: "var(--color-muted)",
+    subtle: "var(--color-subtle)",
+    border: "var(--color-border)",
+    borderStrong: "var(--color-border-strong)",
+    accent: "var(--color-accent)",
+    accentForeground: "var(--color-accent-foreground)",
+    focus: "var(--color-focus)",
+  },
+  spacing: {
+    pageX: "var(--space-page-x)",
+    sectionY: "var(--space-section-y)",
+    1: "var(--space-1)",
+    2: "var(--space-2)",
+    3: "var(--space-3)",
+    4: "var(--space-4)",
+    5: "var(--space-5)",
+    6: "var(--space-6)",
+    8: "var(--space-8)",
+    12: "var(--space-12)",
+  },
+  controlSize: {
+    sm: "var(--control-sm)",
+    md: "var(--control-md)",
+    lg: "var(--control-lg)",
+  },
+  typography: {
+    display: "text-[clamp(3.5rem,9vw,7.5rem)] leading-[0.9] tracking-normal font-semibold",
+    h1: "text-5xl leading-[1] tracking-normal font-semibold md:text-7xl",
+    h2: "text-4xl leading-[1.05] tracking-normal font-semibold md:text-5xl",
+    h3: "text-2xl leading-[1.15] tracking-normal font-semibold md:text-3xl",
+    bodyLarge: "text-lg leading-8 tracking-normal md:text-xl",
+    body: "text-base leading-7 tracking-normal",
+    bodySmall: "text-sm leading-6 tracking-normal",
+    caption: "text-xs leading-5 tracking-normal",
+    button: "text-sm leading-none tracking-normal font-medium",
+  },
+  radius: {
+    xs: "var(--radius-xs)",
+    sm: "var(--radius-sm)",
+    md: "var(--radius-md)",
+    lg: "var(--radius-lg)",
+    full: "var(--radius-full)",
+  },
+  shadows: {
+    sm: "var(--shadow-sm)",
+    md: "var(--shadow-md)",
+    focus: "var(--shadow-focus)",
+  },
+  borders: {
+    subtle: "var(--border-subtle)",
+    strong: "var(--border-strong)",
+  },
+  zIndex: {
+    base: "var(--z-base)",
+    raised: "var(--z-raised)",
+    sticky: "var(--z-sticky)",
+    overlay: "var(--z-overlay)",
+    modal: "var(--z-modal)",
+  },
+  transitions: {
+    standard: "var(--ease-standard)",
+  },
+  durations: {
+    fast: "var(--duration-fast)",
+    base: "var(--duration-base)",
+    slow: "var(--duration-slow)",
+  },
+} as const;
+
+export type DesignTokens = typeof designTokens;
