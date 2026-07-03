@@ -1,5 +1,6 @@
 import { Bell, CalendarDays, Heart, Home as HomeIcon, MessageCircle, Sparkles, Users } from "lucide-react";
 import type { CSSProperties } from "react";
+import { HeroCta, HeroPhone, HeroReveal, HeroSignatureMark } from "@/components/hero-motion";
 import { Container, Grid, Section, Stack } from "@/components/layout";
 import { Badge, Typography } from "@/components/ui";
 
@@ -253,44 +254,49 @@ export default function Home() {
           >
             <Stack gap="md" className="max-w-[34rem] md:justify-self-start lg:max-w-[50rem]">
               <Stack gap="sm">
-                <Badge>Product Builder</Badge>
-                <Typography as="h1" id="hero-heading" variant="h1" className="hero-heading min-h-[5.5rem]">
-                  Designing products people <span>return</span> to.
-                </Typography>
+                <HeroReveal className="w-fit" delay={0.04}>
+                  <Badge>Product Builder</Badge>
+                </HeroReveal>
+                <HeroReveal delay={0.14}>
+                  <Typography as="h1" id="hero-heading" variant="h1" className="hero-heading min-h-[5.5rem]">
+                    Designing products people <span>return</span> to.
+                  </Typography>
+                </HeroReveal>
 
                 <Stack gap="sm">
-                  <Typography variant="bodyLarge" className="hero-copy min-h-[3rem] text-muted">
-                    I partner with founders and teams to turn complex problems into simple, intuitive products that
-                    create real impact.
-                  </Typography>
-                  <div aria-label="Signature area" className="hero-signature min-h-[2.5rem]">
-                    <span className="hero-signature-mark">Sriman</span>
+                  <HeroReveal delay={0.24}>
+                    <Typography variant="bodyLarge" className="hero-copy min-h-[3rem] text-muted">
+                      I partner with founders and teams to turn complex problems into simple, intuitive products that
+                      create real impact.
+                    </Typography>
+                  </HeroReveal>
+                  <HeroReveal className="hero-signature min-h-[2.5rem]" delay={0.32}>
+                    <HeroSignatureMark className="hero-signature-mark">Sriman</HeroSignatureMark>
                     <span className="hero-signature-name">Sriman Goud Panjala</span>
-                  </div>
+                  </HeroReveal>
                 </Stack>
               </Stack>
 
-              <div aria-label="Hero actions" className="flex flex-col gap-[var(--space-3)] sm:flex-row">
-                <div
-                  aria-label="Primary call to action placeholder"
+              <HeroReveal className="flex flex-col gap-[var(--space-3)] sm:flex-row" delay={0.42}>
+                <HeroCta
+                  variant="primary"
                   className="hero-cta hero-cta-primary h-[var(--control-lg)] w-full rounded-full border border-border-strong sm:w-48"
                 >
                   <span>Explore DuoLink</span>
                   <span aria-hidden="true">↗</span>
-                </div>
-                <div
-                  aria-label="Secondary call to action placeholder"
+                </HeroCta>
+                <HeroCta
+                  variant="secondary"
                   className="hero-cta h-[var(--control-lg)] w-full rounded-full border border-border sm:w-48"
                 >
                   <span>Get in touch</span>
                   <span aria-hidden="true">↗</span>
-                </div>
-              </div>
+                </HeroCta>
+              </HeroReveal>
             </Stack>
 
             <div className="flex justify-center md:justify-end lg:col-start-3" aria-label="Phone showcase">
-              <div
-                aria-label="Fictional DuoLink product showcase"
+              <HeroPhone
                 className="duolink-phone aspect-[9/19.5] w-full max-w-[18rem] rounded-[var(--radius-lg)] border border-border-strong bg-surface"
                 style={phoneStyles.phone}
               >
@@ -405,7 +411,7 @@ export default function Home() {
                     </span>
                   </nav>
                 </div>
-              </div>
+              </HeroPhone>
             </div>
           </Grid>
         </Container>
