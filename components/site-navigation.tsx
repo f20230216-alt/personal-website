@@ -29,11 +29,11 @@ export function SiteNavigation() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: shouldReduceMotion ? 0 : 0.42, delay: shouldReduceMotion ? 0 : 0.08, ease: motionEasings.standard }}
     >
-      <Container size="full" className="relative">
+      <Container size="full" className="relative pr-0">
         <motion.nav
           aria-label="Primary navigation"
           className={cn(
-            "pointer-events-auto flex items-center justify-between rounded-[var(--radius-full)]",
+            "pointer-events-auto flex items-center justify-between rounded-l-[var(--radius-full)] pr-[var(--space-page-x)]",
             "transition-colors duration-[var(--duration-base)]",
           )}
           animate={{
@@ -98,7 +98,7 @@ export function SiteNavigation() {
           </button>
         </motion.nav>
         <div
-          className="pointer-events-none absolute inset-x-[var(--space-page-x)] bottom-0 hidden h-px bg-gradient-to-r from-transparent via-white/[0.035] to-transparent md:block"
+          className="pointer-events-none absolute bottom-0 left-[var(--space-page-x)] right-0 hidden h-px bg-gradient-to-r from-transparent via-white/[0.035] to-transparent md:block"
           aria-hidden="true"
         />
       </Container>
