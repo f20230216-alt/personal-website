@@ -2,6 +2,7 @@ import { Bell, CalendarDays, Heart, Home as HomeIcon, MessageCircle, Sparkles, U
 import type { CSSProperties } from "react";
 import { HeroCta, HeroPhone, HeroReveal, HeroSignatureMark } from "@/components/hero-motion";
 import { Container, Grid, Section, Stack } from "@/components/layout";
+import { SiteNavigation } from "@/components/site-navigation";
 import { Badge, Typography } from "@/components/ui";
 
 const phoneStyles = {
@@ -229,6 +230,8 @@ const phoneStyles = {
 export default function Home() {
   return (
     <main className="relative isolate min-h-screen overflow-hidden bg-background">
+      <SiteNavigation />
+
       <div className="hero-environment" aria-hidden="true">
         <svg
           className="hero-linework"
