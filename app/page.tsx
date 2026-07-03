@@ -7,11 +7,11 @@ const phoneStyles = {
   phone: {
     position: "relative",
     overflow: "hidden",
-    borderColor: "rgb(245 245 243 / 0.2)",
+    borderColor: "rgb(245 245 243 / 0.16)",
     background:
-      "linear-gradient(145deg, rgb(255 255 255 / 0.045), transparent 20%), radial-gradient(circle at 50% 0%, rgb(184 122 255 / 0.11), transparent 34%), var(--color-surface)",
+      "linear-gradient(145deg, rgb(255 255 255 / 0.055), transparent 20%), linear-gradient(180deg, rgb(255 255 255 / 0.035), transparent 28%), radial-gradient(circle at 50% 0%, rgb(184 122 255 / 0.12), transparent 34%), var(--color-surface)",
     boxShadow:
-      "0 0 34px rgb(184 122 255 / 0.07), 0 22px 64px rgb(0 0 0 / 0.44), inset 0 0 0 1px rgb(255 255 255 / 0.04)",
+      "0 0 34px rgb(184 122 255 / 0.07), 0 24px 70px rgb(0 0 0 / 0.46), inset 0 1px 0 rgb(255 255 255 / 0.08), inset 0 0 0 1px rgb(255 255 255 / 0.035)",
   },
   notch: {
     position: "absolute",
@@ -23,6 +23,7 @@ const phoneStyles = {
     border: "1px solid rgb(255 255 255 / 0.08)",
     borderRadius: "var(--radius-full)",
     background: "#030305",
+    boxShadow: "0 1px 0 rgb(255 255 255 / 0.05), 0 8px 18px rgb(0 0 0 / 0.34)",
     transform: "translateX(-50%)",
   },
   highlight: {
@@ -30,7 +31,7 @@ const phoneStyles = {
     inset: 0,
     zIndex: 2,
     background:
-      "linear-gradient(110deg, rgb(255 255 255 / 0.06), transparent 22% 78%, rgb(255 255 255 / 0.03)), radial-gradient(circle at 62% 24%, rgb(184 122 255 / 0.12), transparent 17rem)",
+      "linear-gradient(110deg, rgb(255 255 255 / 0.055), transparent 22% 78%, rgb(255 255 255 / 0.035)), radial-gradient(circle at 62% 24%, rgb(184 122 255 / 0.105), transparent 17rem)",
     pointerEvents: "none",
   },
   screen: {
@@ -73,10 +74,11 @@ const phoneStyles = {
     justifyContent: "center",
     width: "1.28rem",
     height: "1.28rem",
+    border: "1px solid rgb(255 255 255 / 0.07)",
     borderRadius: "0.5rem",
     color: "#c17aff",
-    background: "rgb(184 122 255 / 0.14)",
-    boxShadow: "0 0 18px rgb(184 122 255 / 0.18)",
+    background: "linear-gradient(180deg, rgb(184 122 255 / 0.2), rgb(184 122 255 / 0.1))",
+    boxShadow: "inset 0 1px 0 rgb(255 255 255 / 0.09), 0 0 16px rgb(184 122 255 / 0.16)",
   },
   headerActions: {
     display: "flex",
@@ -87,21 +89,26 @@ const phoneStyles = {
     display: "inline-flex",
     alignItems: "center",
     justifyContent: "center",
-    width: "1.55rem",
-    height: "1.55rem",
-    border: "1px solid rgb(255 255 255 / 0.08)",
+    width: "1.5rem",
+    height: "1.5rem",
+    border: "1px solid rgb(255 255 255 / 0.095)",
     borderRadius: "var(--radius-full)",
     color: "rgb(245 245 243 / 0.7)",
-    background: "rgb(255 255 255 / 0.04)",
+    background: "linear-gradient(180deg, rgb(255 255 255 / 0.06), rgb(255 255 255 / 0.025))",
+    boxShadow: "inset 0 1px 0 rgb(255 255 255 / 0.055)",
   },
   card: {
-    border: "1px solid rgb(255 255 255 / 0.08)",
-    background: "linear-gradient(180deg, rgb(255 255 255 / 0.065), rgb(255 255 255 / 0.025)), rgb(12 12 18 / 0.92)",
-    boxShadow: "inset 0 1px 0 rgb(255 255 255 / 0.045), 0 12px 28px rgb(0 0 0 / 0.2)",
+    border: "1px solid rgb(255 255 255 / 0.105)",
+    background:
+      "radial-gradient(circle at 18% 0%, rgb(255 255 255 / 0.065), transparent 42%), linear-gradient(180deg, rgb(255 255 255 / 0.07), rgb(255 255 255 / 0.026)), rgb(12 12 18 / 0.93)",
+    boxShadow:
+      "inset 0 1px 0 rgb(255 255 255 / 0.07), inset 0 -1px 0 rgb(0 0 0 / 0.24), 0 12px 26px rgb(0 0 0 / 0.18)",
   },
   overview: {
-    padding: "0.82rem",
+    padding: "0.84rem",
     borderRadius: "1rem",
+    background:
+      "radial-gradient(circle at 78% 12%, rgb(184 122 255 / 0.12), transparent 34%), radial-gradient(circle at 16% 0%, rgb(255 255 255 / 0.065), transparent 42%), linear-gradient(180deg, rgb(255 255 255 / 0.072), rgb(255 255 255 / 0.024)), rgb(12 12 18 / 0.94)",
   },
   cardHeader: {
     display: "flex",
@@ -123,12 +130,14 @@ const phoneStyles = {
     fontWeight: 500,
     letterSpacing: 0,
     lineHeight: 1,
+    textShadow: "0 0 18px rgb(184 122 255 / 0.18)",
   },
   pill: {
-    border: "1px solid rgb(255 255 255 / 0.08)",
+    border: "1px solid rgb(255 255 255 / 0.095)",
     borderRadius: "var(--radius-full)",
     padding: "0.28rem 0.48rem",
     color: "rgb(245 245 243 / 0.6)",
+    background: "rgb(255 255 255 / 0.035)",
     fontSize: "0.58rem",
     lineHeight: 1,
   },
@@ -137,7 +146,7 @@ const phoneStyles = {
     width: "100%",
     height: "6.65rem",
     marginTop: "0.55rem",
-    filter: "drop-shadow(0 0 10px rgb(184 122 255 / 0.16))",
+    filter: "drop-shadow(0 0 9px rgb(184 122 255 / 0.14))",
   },
   grid: {
     display: "grid",
@@ -150,8 +159,10 @@ const phoneStyles = {
     flexDirection: "column",
     justifyContent: "space-between",
     borderRadius: "0.9rem",
-    padding: "0.62rem",
+    padding: "0.64rem",
     color: "#c17aff",
+    background:
+      "radial-gradient(circle at 28% 0%, rgb(255 255 255 / 0.06), transparent 40%), linear-gradient(180deg, rgb(255 255 255 / 0.058), rgb(255 255 255 / 0.022)), rgb(12 12 18 / 0.92)",
   },
   miniValue: {
     color: "rgb(245 245 243 / 0.9)",
@@ -165,6 +176,8 @@ const phoneStyles = {
     minHeight: "5.4rem",
     borderRadius: "1rem",
     padding: "0.82rem",
+    background:
+      "radial-gradient(circle at 10% 0%, rgb(184 122 255 / 0.08), transparent 36%), linear-gradient(180deg, rgb(255 255 255 / 0.064), rgb(255 255 255 / 0.025)), rgb(12 12 18 / 0.94)",
   },
   insightHeader: {
     display: "flex",
@@ -190,10 +203,12 @@ const phoneStyles = {
     gridTemplateColumns: "repeat(3, 1fr)",
     gap: "0.5rem",
     marginTop: "auto",
-    border: "1px solid rgb(255 255 255 / 0.07)",
+    border: "1px solid rgb(255 255 255 / 0.09)",
     borderRadius: "var(--radius-full)",
-    padding: "0.34rem",
-    background: "rgb(255 255 255 / 0.035)",
+    padding: "0.36rem",
+    background:
+      "linear-gradient(180deg, rgb(255 255 255 / 0.055), rgb(255 255 255 / 0.025)), rgb(5 5 8 / 0.72)",
+    boxShadow: "inset 0 1px 0 rgb(255 255 255 / 0.06), 0 10px 18px rgb(0 0 0 / 0.18)",
   },
   navItem: {
     display: "inline-flex",
@@ -205,7 +220,8 @@ const phoneStyles = {
   },
   navItemActive: {
     color: "#c17aff",
-    background: "rgb(184 122 255 / 0.12)",
+    background: "linear-gradient(180deg, rgb(184 122 255 / 0.19), rgb(184 122 255 / 0.1))",
+    boxShadow: "inset 0 1px 0 rgb(255 255 255 / 0.08), 0 0 14px rgb(184 122 255 / 0.1)",
   },
 } satisfies Record<string, CSSProperties>;
 
@@ -289,16 +305,16 @@ export default function Home() {
                   <header className="duolink-header" style={phoneStyles.header}>
                     <div className="duolink-brand" style={phoneStyles.brand}>
                       <span className="duolink-brand-icon" style={phoneStyles.brandIcon}>
-                        <Heart size={15} fill="currentColor" aria-hidden="true" />
+                        <Heart size={14} strokeWidth={1.9} fill="currentColor" aria-hidden="true" />
                       </span>
                       <span>DuoLink</span>
                     </div>
                     <div className="duolink-header-actions" style={phoneStyles.headerActions} aria-hidden="true">
                       <span style={phoneStyles.actionIcon}>
-                        <Bell size={13} />
+                        <Bell size={13} strokeWidth={1.8} />
                       </span>
                       <span style={phoneStyles.actionIcon}>
-                        <Sparkles size={13} />
+                        <Sparkles size={13} strokeWidth={1.8} />
                       </span>
                     </div>
                   </header>
@@ -324,19 +340,20 @@ export default function Home() {
                       aria-hidden="true"
                     >
                       <path
-                        d="M4 69C22 61 29 35 47 43C66 52 71 71 91 58C110 46 112 20 132 29C149 36 150 56 169 48C189 39 191 21 216 14"
+                        d="M4 68C23 59 31 38 48 43C67 49 72 68 91 58C111 47 114 24 133 30C151 36 153 56 171 48C190 40 193 22 216 14"
                         stroke="url(#duolink-chart-line)"
-                        strokeWidth="3"
+                        strokeWidth="2.8"
                         strokeLinecap="round"
                       />
                       <path
-                        d="M4 69C22 61 29 35 47 43C66 52 71 71 91 58C110 46 112 20 132 29C149 36 150 56 169 48C189 39 191 21 216 14V88H4V69Z"
+                        d="M4 68C23 59 31 38 48 43C67 49 72 68 91 58C111 47 114 24 133 30C151 36 153 56 171 48C190 40 193 22 216 14V88H4V68Z"
                         fill="url(#duolink-chart-fill)"
                       />
                       <defs>
                         <linearGradient id="duolink-chart-line" x1="4" y1="69" x2="216" y2="14">
                           <stop stopColor="#8F5CFF" />
-                          <stop offset="1" stopColor="#D7A4FF" />
+                          <stop offset="0.55" stopColor="#B06DFF" />
+                          <stop offset="1" stopColor="#D5A1FF" />
                         </linearGradient>
                         <linearGradient id="duolink-chart-fill" x1="110" y1="14" x2="110" y2="88">
                           <stop stopColor="#A855F7" stopOpacity="0.24" />
@@ -348,17 +365,17 @@ export default function Home() {
 
                   <section className="duolink-grid" style={phoneStyles.grid} aria-label="Relationship insight cards">
                     <div className="duolink-mini-card" style={{ ...phoneStyles.card, ...phoneStyles.miniCard }}>
-                      <Heart size={16} aria-hidden="true" />
+                      <Heart size={15} strokeWidth={1.8} aria-hidden="true" />
                       <span style={phoneStyles.mutedLabel}>Affinity</span>
                       <strong style={phoneStyles.miniValue}>92</strong>
                     </div>
                     <div className="duolink-mini-card" style={{ ...phoneStyles.card, ...phoneStyles.miniCard }}>
-                      <Users size={16} aria-hidden="true" />
+                      <Users size={15} strokeWidth={1.8} aria-hidden="true" />
                       <span style={phoneStyles.mutedLabel}>Presence</span>
                       <strong style={phoneStyles.miniValue}>18</strong>
                     </div>
                     <div className="duolink-mini-card" style={{ ...phoneStyles.card, ...phoneStyles.miniCard }}>
-                      <CalendarDays size={16} aria-hidden="true" />
+                      <CalendarDays size={15} strokeWidth={1.8} aria-hidden="true" />
                       <span style={phoneStyles.mutedLabel}>Moments</span>
                       <strong style={phoneStyles.miniValue}>7</strong>
                     </div>
@@ -378,13 +395,13 @@ export default function Home() {
 
                   <nav className="duolink-nav" style={phoneStyles.nav} aria-label="DuoLink preview navigation">
                     <span aria-label="Home" style={{ ...phoneStyles.navItem, ...phoneStyles.navItemActive }}>
-                      <HomeIcon size={15} />
+                      <HomeIcon size={15} strokeWidth={1.8} />
                     </span>
                     <span aria-label="Messages" style={phoneStyles.navItem}>
-                      <MessageCircle size={15} />
+                      <MessageCircle size={15} strokeWidth={1.8} />
                     </span>
                     <span aria-label="People" style={phoneStyles.navItem}>
-                      <Users size={15} />
+                      <Users size={15} strokeWidth={1.8} />
                     </span>
                   </nav>
                 </div>
